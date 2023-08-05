@@ -22,7 +22,7 @@ const DB = {
 }
 
 app.get('/', (req, res) => {
-    res.send('Use \'/courses\' endpoint to get courses');
+    res.send('Hello, Vladimir!\nYou can add \'/courses\' to url to get courses!\nBut that\'s all for now :)');
 })
 
 app.get('/courses', (req, res) => {
