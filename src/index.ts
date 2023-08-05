@@ -22,7 +22,7 @@ const DB = {
 }
 
 app.get('/', (req, res) => {
-    res.send('Hello, Vladimir!\nYou can add \'/courses\' to url to get courses!\nBut that\'s all for now :)');
+    res.send('<h1>Hello, Vladimir!</h1><h2>You can add "/courses" to url above to get "courses" array!</h2><p>But that\'s all for now :)</p>');
 })
 
 app.get('/courses', (req, res) => {
