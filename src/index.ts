@@ -6,6 +6,8 @@ const jsonBodyMiddleware = express.json();
 
 app.use(jsonBodyMiddleware)
 
+const PORT = process.env.PORT || 3003
+
 const HHTP_STATUSES = {
     OK_200: 200,
     CREATED_201: 201,
@@ -84,8 +86,6 @@ app.put('/courses/:id', (req, res) => {
     res.status(HHTP_STATUSES.CREATED_201).json(DB.courses[courseIndex]);
 })
 
-app.listen(3003, () => {
+app.listen(PORT, () => {
     console.log('Server is running! Port: 3003');
 })
-
-//fetch('http://localhost:3003', {method: 'GET'}).then((res)=>res.json()).then((json)=>console.log(json))
